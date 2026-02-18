@@ -1,0 +1,205 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-xl);
+  transition: background var(--duration-normal) var(--ease-out),
+              border-color var(--duration-normal) var(--ease-out);
+  border-bottom: 1px solid transparent;
+}
+
+.navScrolled {
+  background: var(--color-overlay-light);
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  border-bottom-color: rgba(201, 169, 110, 0.2);
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logoKr {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-teal);
+  letter-spacing: 0.05em;
+  transition: color var(--duration-fast);
+}
+
+.logoEn {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  letter-spacing: var(--tracking-wider);
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.navScrolled .logoKr {
+  color: var(--color-teal);
+}
+
+/* Hero 위에 있을 때 — 흰색으로 */
+.navOnHero .logoKr {
+  color: #ffffff;
+}
+.navOnHero .logoEn {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xl);
+  list-style: none;
+}
+
+.menuLink {
+  font-family: var(--font-body);
+  font-size: 14px;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-secondary);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color var(--duration-fast);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: none;
+}
+
+.menuLinkActive {
+  color: var(--color-accent);
+}
+
+.menuLinkActive::after {
+  width: 100%;
+}
+
+.navOnHero .menuLink {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.menuLink::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width var(--duration-normal) var(--ease-out);
+}
+
+.menuLink:hover {
+  color: var(--color-accent);
+}
+
+.menuLink:hover::after {
+  width: 100%;
+}
+
+/* 햄버거 버튼 */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  width: 24px;
+  height: 1.5px;
+  background: var(--color-teal);
+  transition: all var(--duration-normal) var(--ease-out);
+  transform-origin: center;
+}
+
+.navOnHero .hamburgerLine {
+  background: #ffffff;
+}
+
+/* 모바일 오버레이 메뉴 */
+.mobileOverlay {
+  position: fixed;
+  inset: 0;
+  background: var(--color-teal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xl);
+  z-index: 200;
+}
+
+.mobileMenuLink {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: var(--tracking-wide);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--duration-fast);
+}
+
+.mobileMenuLink:hover {
+  color: var(--color-accent);
+}
+
+.mobileClose {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  transition: color var(--duration-fast);
+}
+
+.mobileClose:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    height: 64px;
+    padding: 0 var(--space-lg);
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

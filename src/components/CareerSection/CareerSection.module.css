@@ -1,0 +1,301 @@
+.section {
+  padding: var(--space-4xl) 0;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+/* ─── 섹션 헤더 ─── */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.titleLine {
+  flex: 0 0 60px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.2em;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-caption);
+  font-weight: 300;
+  color: var(--color-text-muted);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+/* ─── 수상 타임라인 ─── */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 72px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--color-accent) 10%, var(--color-accent) 90%, transparent);
+}
+
+.timelineItem {
+  display: flex;
+  gap: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  position: relative;
+}
+
+.timelineYear {
+  flex: 0 0 72px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: var(--tracking-wide);
+  text-align: right;
+  padding-top: 2px;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 68px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 2px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.timelineContent {
+  flex: 1;
+  padding-left: var(--space-lg);
+}
+
+.timelineTitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: var(--leading-normal);
+}
+
+.timelineVenue {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+/* ─── 전시 그리드 ─── */
+.exhibGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.exhibCard {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  transition: box-shadow var(--duration-normal) var(--ease-out),
+              border-color var(--duration-normal) var(--ease-out);
+}
+
+.exhibCard:hover {
+  box-shadow: var(--shadow-card);
+  border-color: rgba(201, 169, 110, 0.35);
+}
+
+.exhibYear {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: var(--tracking-wider);
+  margin-bottom: var(--space-xs);
+}
+
+.exhibTitle {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-2xs);
+}
+
+.exhibVenue {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: var(--color-text-muted);
+}
+
+/* ─── 탭 ─── */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.tab {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 6px;
+  cursor: pointer;
+  transition: color var(--duration-fast), border-color var(--duration-fast);
+}
+
+.tab:hover {
+  color: var(--color-text-secondary);
+}
+
+.tabActive {
+  color: var(--color-text);
+  font-weight: 600;
+  border-bottom-color: var(--color-accent);
+}
+
+/* ─── 소장처 & 소속 ─── */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.listBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.listBlockTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+}
+
+.listItem {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.listItem::before {
+  content: '';
+  flex: 0 0 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+/* ─── 기타 경력 ─── */
+.otherList {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.otherItem {
+  display: flex;
+  gap: var(--space-xl);
+  align-items: baseline;
+}
+
+.otherYear {
+  flex: 0 0 50px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+
+.otherText {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* alt bg */
+.altBg {
+  background: var(--color-bg-alt);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 var(--space-lg);
+  }
+
+  .timeline::before {
+    left: 48px;
+  }
+
+  .timelineYear {
+    flex: 0 0 48px;
+    font-size: 11px;
+  }
+
+  .timelineDot {
+    left: 44px;
+  }
+
+  .twoCol {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .exhibGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    gap: var(--space-md);
+  }
+}

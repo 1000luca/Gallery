@@ -1,0 +1,82 @@
+.card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.hoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 40%, rgba(26, 60, 77, 0.7) 100%);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-md);
+}
+
+.card:hover .hoverOverlay {
+  opacity: 1;
+}
+
+.hoverTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: var(--leading-tight);
+}
+
+.hoverYear {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: var(--space-2xs);
+  letter-spacing: var(--tracking-wide);
+}
+
+.info {
+  padding: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: var(--leading-tight);
+}
+
+.meta {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2xs);
+  letter-spacing: var(--tracking-normal);
+}
