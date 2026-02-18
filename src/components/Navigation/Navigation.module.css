@@ -35,6 +35,7 @@
   line-height: 1;
   cursor: pointer;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logoKr {
@@ -63,9 +64,11 @@
 /* Hero 위에 있을 때 — 흰색으로 */
 .navOnHero .logoKr {
   color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 .navOnHero .logoEn {
   color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
 .menu {
@@ -99,6 +102,7 @@
 
 .navOnHero .menuLink {
   color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
 .menuLink::after {
@@ -124,8 +128,13 @@
 .hamburger {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
   gap: 5px;
   padding: 8px;
+  color: var(--color-teal);
   background: none;
   border: none;
   cursor: pointer;
@@ -141,6 +150,10 @@
 
 .navOnHero .hamburgerLine {
   background: #ffffff;
+}
+
+.navOnHero .hamburger {
+  color: #ffffff;
 }
 
 /* 모바일 오버레이 메뉴 */
@@ -189,17 +202,108 @@
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .nav {
-    height: 64px;
-    padding: 0 var(--space-lg);
+@media (max-width: 900px) {
+  .logoKr {
+    font-size: 18px;
+  }
+
+  .logoEn {
+    font-size: 11px;
   }
 
   .menu {
-    display: none;
+    gap: var(--space-lg);
+  }
+
+  .menuLink {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navOnHero {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom-color: transparent;
+  }
+
+  .navOnHero .logoKr {
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+  }
+
+  .navOnHero .logoEn {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+  }
+
+  .navOnHero .hamburger {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav {
+    height: 64px;
+    padding: 0 var(--space-md);
+  }
+
+  .menu {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .menuLink {
+    font-size: 13px;
+    letter-spacing: 0.02em;
   }
 
   .hamburger {
-    display: flex;
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .logoKr {
+    font-size: 17px;
+  }
+
+  .logoEn {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .menu {
+    gap: 10px;
+  }
+
+  .menuLink {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 0 10px;
+  }
+
+  .logoKr {
+    font-size: 16px;
+  }
+
+  .logoEn {
+    display: none;
+  }
+
+  .menu {
+    gap: 8px;
+  }
+
+  .menuLink {
+    font-size: 11px;
+    letter-spacing: 0.01em;
   }
 }

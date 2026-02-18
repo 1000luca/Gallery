@@ -17,7 +17,7 @@ export default function About() {
         <header className={styles.header}>
           <div className={styles.titleWrap}>
             <div className={styles.titleLine} />
-            <h2 className={styles.title}>작가 소개</h2>
+            <h2 className={styles.title}>소개</h2>
             <div className={styles.titleLine} />
           </div>
           <p className={styles.subtitle}>About the Artist</p>
@@ -46,7 +46,8 @@ export default function About() {
               custom={0.15}
               viewport={{ once: true, margin: '-80px' }}
             >
-              강명순 (Kang Myung Soon)
+              <span className={styles.nameKo}>강명순</span>
+              <span className={styles.nameEn}>(Kang Myung Soon)</span>
             </motion.h3>
 
             <motion.p
@@ -57,7 +58,7 @@ export default function About() {
               custom={0.3}
               viewport={{ once: true, margin: '-80px' }}
             >
-              혼합매체를 통해 자연과 생명의 순환을 표현하는 작가. 한지, 아크릴, 오일파스텔 등 다양한 재료를 겹겹이 쌓아 올리며 꽃과 자연의 아름다움을 캔버스에 담아낸다. 2017년부터 현재까지 '기억의 정원' 시리즈를 통해 자연의 숨결과 시간의 흔적을 탐구해왔다.
+              혼합매체를 통해 자연과 생명의 순환을 표현하는 작가. 한지, 아크릴, 오일파스텔 등 다양한 재료를 겹겹이 쌓아 올리며 꽃과 자연의 아름다움을 캔버스에 담아낸다. 1986년부터 현재까지 '기억의 정원' 시리즈를 통해 자연의 숨결과 시간의 흔적을 탐구해왔다.
             </motion.p>
 
             <motion.blockquote

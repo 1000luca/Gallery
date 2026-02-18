@@ -78,6 +78,7 @@
   letter-spacing: var(--tracking-wide);
   text-align: right;
   padding-top: 2px;
+  padding-right: 10px;
 }
 
 .timelineDot {
@@ -274,16 +275,17 @@
   }
 
   .timeline::before {
-    left: 48px;
+    left: 58px;
   }
 
   .timelineYear {
-    flex: 0 0 48px;
+    flex: 0 0 58px;
     font-size: 12px;
+    padding-right: 10px;
   }
 
   .timelineDot {
-    left: 44px;
+    left: 54px;
   }
 
   .twoCol {

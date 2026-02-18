@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'motion/react'
+import { useNavigate } from 'react-router-dom'
 import styles from './Hero.module.css'
 
 const fadeUp = (delay = 0) => ({
@@ -10,6 +11,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   const bgRef = useRef(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const onScroll = () => {
@@ -21,10 +23,7 @@ export default function Hero() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleCta = () => {
-    const el = document.querySelector('#gallery')
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
+  const handleNavigate = (path) => navigate(path)
 
   return (
     <section className={styles.hero} aria-label="히어로 섹션">
@@ -44,15 +43,32 @@ export default function Hero() {
           "자연의 숨결을 캔버스에 담다"
         </motion.p>
 
-        <motion.button
-          className={styles.cta}
-          onClick={handleCta}
-          {...fadeUp(0.6)}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          작품 보기
-        </motion.button>
+        <motion.div className={styles.ctaGroup} {...fadeUp(0.6)}>
+          <motion.button
+            className={styles.cta}
+            onClick={() => handleNavigate('/works')}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            작품 보기
+          </motion.button>
+          <motion.button
+            className={styles.cta}
+            onClick={() => handleNavigate('/career')}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            작가 소개
+          </motion.button>
+          <motion.button
+            className={styles.cta}
+            onClick={() => handleNavigate('/contact')}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            연락처
+          </motion.button>
+        </motion.div>
       </div>
 
       <motion.div

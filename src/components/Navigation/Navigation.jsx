@@ -6,7 +6,7 @@ import styles from './Navigation.module.css'
 
 const NAV_LINKS = [
   { label: '작품', to: '/works' },
-  { label: '경력', to: '/career' },
+  { label: '소개', to: '/career' },
   { label: '연락처', to: '/contact' },
 ]
 
@@ -70,7 +70,7 @@ export default function Navigation() {
             aria-label="메뉴 열기"
             aria-expanded={mobileOpen}
           >
-            <Menu size={24} color="inherit" />
+            <Menu size={24} />
           </button>
         </div>
       </header>

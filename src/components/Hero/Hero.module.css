@@ -14,17 +14,16 @@
   background-image: url('/artworks/artwork-6.jpg');
   background-size: cover;
   background-position: center;
+  filter: brightness(1.1);
   will-change: transform;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(26, 60, 77, 0.15) 0%,
-    rgba(26, 60, 77, 0.55) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(26, 60, 77, 0.30) 0%,
+      rgba(26, 60, 77, 0.72) 100%);
 }
 
 .content {
@@ -45,6 +44,7 @@
   color: #ffffff;
   letter-spacing: 0.3em;
   line-height: var(--leading-tight);
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.40);
 }
 
 .nameEn {
@@ -56,6 +56,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-md);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .nameEn::before,
@@ -74,10 +75,19 @@
   color: rgba(255, 255, 255, 0.7);
   font-style: italic;
   letter-spacing: var(--tracking-wide);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.ctaGroup {
+  margin-top: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
 }
 
 .cta {
-  margin-top: var(--space-md);
   padding: 12px 40px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   color: #ffffff;
@@ -85,11 +95,12 @@
   font-size: 15px;
   letter-spacing: var(--tracking-wide);
   border-radius: var(--radius-sm);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.08);
   cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
   transition: background var(--duration-normal) var(--ease-out),
-              color var(--duration-normal) var(--ease-out),
-              border-color var(--duration-normal) var(--ease-out);
+    color var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out);
 }
 
 .cta:hover {
@@ -116,11 +127,37 @@
 .scrollLine {
   width: 1px;
   height: 40px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), transparent);
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
 @keyframes scrollPulse {
-  0%, 100% { opacity: 0.6; transform: scaleY(1); }
-  50% { opacity: 1; transform: scaleY(0.7); }
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scaleY(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    background: linear-gradient(to bottom,
+        rgba(26, 60, 77, 0.30) 0%,
+        rgba(26, 60, 77, 0.78) 100%);
+  }
+
+  .quote {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .cta {
+    width: 100%;
+    max-width: 260px;
+  }
 }
