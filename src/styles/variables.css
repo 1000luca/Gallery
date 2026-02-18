@@ -27,14 +27,14 @@
   --font-body:    'Noto Serif KR', '바탕', serif;
 
   /* 폰트 크기 */
-  --text-hero:     clamp(48px, 8vw, 80px);
-  --text-hero-sub: clamp(18px, 3vw, 28px);
-  --text-h1:       clamp(32px, 5vw, 48px);
-  --text-h2:       clamp(24px, 3vw, 32px);
-  --text-h3:       clamp(18px, 2vw, 24px);
-  --text-body:     clamp(15px, 1.5vw, 17px);
-  --text-caption:  clamp(12px, 1vw, 14px);
-  --text-small:    12px;
+  --text-hero:     clamp(49px, 8.1vw, 82px);
+  --text-hero-sub: clamp(19px, 3.1vw, 29px);
+  --text-h1:       clamp(33px, 5.1vw, 50px);
+  --text-h2:       clamp(25px, 3.1vw, 34px);
+  --text-h3:       clamp(19px, 2.1vw, 25px);
+  --text-body:     clamp(16px, 1.6vw, 18px);
+  --text-caption:  clamp(13px, 1.1vw, 15px);
+  --text-small:    13px;
 
   /* 줄 높이 */
   --leading-tight:  1.3;

@@ -31,4 +31,4 @@ dist-ssr
 .env.production.local
 
 # Claude settings (optional, keeping it for now since we just created it)
-# .claude/
+.claude/

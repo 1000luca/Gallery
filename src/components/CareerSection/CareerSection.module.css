@@ -72,7 +72,7 @@
 .timelineYear {
   flex: 0 0 72px;
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--color-accent);
   letter-spacing: var(--tracking-wide);
@@ -138,7 +138,7 @@
 
 .exhibYear {
   font-family: var(--font-display);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--color-accent);
   letter-spacing: var(--tracking-wider);
@@ -147,7 +147,7 @@
 
 .exhibTitle {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-text);
   line-height: var(--leading-tight);
@@ -170,7 +170,7 @@
 
 .tab {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   color: var(--color-text-muted);
   background: none;
   border: none;
@@ -250,7 +250,7 @@
 .otherYear {
   flex: 0 0 50px;
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--color-accent);
   letter-spacing: 0.05em;
@@ -279,7 +279,7 @@
 
   .timelineYear {
     flex: 0 0 48px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .timelineDot {

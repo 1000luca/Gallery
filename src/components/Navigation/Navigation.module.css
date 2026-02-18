@@ -39,7 +39,7 @@
 
 .logoKr {
   font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--color-teal);
   letter-spacing: 0.05em;
@@ -48,7 +48,7 @@
 
 .logoEn {
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
   color: var(--color-text-muted);
   letter-spacing: var(--tracking-wider);
@@ -77,7 +77,7 @@
 
 .menuLink {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: var(--tracking-wide);
   color: var(--color-text-secondary);
   position: relative;

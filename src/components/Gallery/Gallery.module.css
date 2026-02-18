@@ -58,7 +58,7 @@
 .filterBtn {
   position: relative;
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   color: var(--color-text-muted);
   background: none;
   border: none;
