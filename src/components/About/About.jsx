@@ -32,9 +32,12 @@ export default function About() {
             custom={0}
             viewport={{ once: true, margin: '-80px' }}
           >
-            <div className={styles.profilePlaceholder} aria-hidden="true">
-              <span className={styles.profileInitials}>강</span>
-            </div>
+            <img
+              className={styles.profileImg}
+              src="/profile/kang-myung-soon.jpeg"
+              alt="강명순 작가 프로필 사진"
+              loading="lazy"
+            />
           </motion.div>
 
           <div className={styles.textContent}>

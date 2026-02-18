@@ -32,3 +32,4 @@ dist-ssr
 
 # Claude settings (optional, keeping it for now since we just created it)
 .claude/
+.vercel
